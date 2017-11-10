@@ -1,0 +1,8 @@
+﻿#过滤文件夹
+/node_modules
+/doc
+/viedo
+
+#过滤文件
+*.zip
+*.rar
