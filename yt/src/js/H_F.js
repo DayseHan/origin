@@ -1,10 +1,9 @@
-;jQuery(function($){
+jQuery(function($){
     //链接网站头部和尾部
-    $('#pageHeader').load('../html/header.html #head'); 
-    $('#pageFooter').load('../html/footer.html #footer');    
+    // $('#pageHeader').load('../html/header.html #head'); 
+    // $('#pageFooter').load('../html/footer.html #footer');    
 
 
-    window.onload = (function(){
         //banner二维码动画
         $('#ewm').on('mouseover',function(){console.log(777)
             $(this).animate({right:10});
@@ -58,6 +57,12 @@
         $('#h_banner').find('img').on('click',function(){console.log(666)
             window.open('../html/news.html');
         });
-    });
+
+        //控制三级列表显示、隐藏
+        $('#h_nav').find('.tal').on('mouseover',function(){
+            $(this).find('ul').css('display','block');
+        }).on('mouseout',function(){
+            $(this).find('ul').css('display','none');
+        })
     
 });

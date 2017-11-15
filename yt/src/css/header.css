@@ -1,6 +1,7 @@
 html, body {
   width: 100%;
-  font-family: Arial; }
+  font-family: Arial;
+  min-width: 1190px; }
 
 #head {
   min-height: 100px; }
@@ -182,7 +183,8 @@ html, body {
       font-size: 18px; }
       #head #h_nav .tal ul {
         background-color: #333333;
-        color: #E6E4D8; }
+        color: #E6E4D8;
+        display: none; }
         #head #h_nav .tal ul li {
           padding-left: 16px;
           height: 47.3px;
@@ -254,23 +256,3 @@ html, body {
           padding: 0px 6px; }
       #head #h_nav .ul2 li:hover a {
         color: #E70350; }
-  #head #h_banner {
-    min-height: 470px;
-    background: url(../img/bg-01.jpg) repeat center; }
-    #head #h_banner .container {
-      position: relative; }
-      #head #h_banner .container .cal {
-        min-height: 470px; }
-        #head #h_banner .container .cal .size {
-          height: 470px;
-          width: 755px; }
-      #head #h_banner .container .banner {
-        margin: 0 auto; }
-      #head #h_banner .container a {
-        display: inline-block;
-        width: 200px;
-        height: 470px;
-        position: absolute;
-        right: 0px;
-        top: 0px;
-        background: url(../img/banner_r.jpg); }

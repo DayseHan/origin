@@ -1,11 +1,11 @@
 jQuery(function($){
-    $('#pageFooter').load('../html/footer.html #footer');
-    // window.onload = function(){
-    //     $('#footer').find('.link').remove();
-    // }
-    document.onreadystatechange = function(){
+    $('#pageFooter').load('../html/footer.html #footer',function(){
         $('#footer').find('.link').remove();
-    }
+    });
+    
+    // document.onreadystatechange = function(){
+        
+    // }
 
     // 注册验证
     let $btn2 = $('.banner_r2').find('.ipt');

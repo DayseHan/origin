@@ -16,3 +16,27 @@
         margin-bottom: 10px;
         margin-right: 7px;
         border: 1px solid skyblue; }
+
+#h_banner {
+  min-height: 470px;
+  background: url(../img/bg-01.jpg) repeat center; }
+  #h_banner .container {
+    position: relative; }
+    #h_banner .container .cal {
+      min-height: 470px; }
+      #h_banner .container .cal .size {
+        height: 470px;
+        width: 755px; }
+    #h_banner .container .banner {
+      margin: 0 auto; }
+    #h_banner .container a {
+      display: inline-block;
+      width: 200px;
+      height: 470px;
+      position: absolute;
+      right: 0px;
+      top: 0px;
+      background: url(../img/banner_r.jpg); }
+
+#head #h_nav .tal ul {
+  display: block; }

@@ -4,11 +4,11 @@
 	// 	// 这里的this为jquery对象（实例）
 	// }
 
-	$.fn.Carousel = function(options){
+	$.fn.jjCarousel = function(options){
 		// 默认属性
 		var defaults = {
-			width:755,
-			height:470,
+			width:0,
+			height:0,
 			imgs:[],
 
 			ele:'.carousel',
@@ -31,6 +31,9 @@
 			// 是否显示页码
 			page:false,
 
+			//// 是否显示页码数字
+			pageNum:false,
+
 			// 是否无缝滚动
 			wufeng:false,
 		}
@@ -47,10 +50,10 @@
 				//绑定事件
 				init(opt){
 					$self.addClass('carousel');
-
+					$self.css('width',opt.width).css('height',opt.height);
+					var $sf = $(this);
 					this.index = opt.index;
 					this.opt = opt;
-					
 					let ul = document.createElement('ul');
 					ul.innerHTML = opt.imgs.map(item=>{
 						return `<li><img src="${item}"></li>`
@@ -72,30 +75,31 @@
 							this.stop();
 						}.bind(this)).on('mouseleave',function(){
 							this.start();
-							console.log(this)
 						}.bind(this))
 					}
 
 					// 分页
 					if(opt.page){
+						var x;
 						let $page = $('<div/>');
 			            $page.addClass('page');
 			            for(let i =1; i<=this.len;i++){
 			                let $span = $('<span/>');
 			                $span.text(i);
-			                if(i === this.index){
-			                    $span.addClass('active');
-			                }
 			                $page.append($span);
+			                $page.find('span').eq(this.index).addClass('active');
 			            }
 			            $self.append($page);
-			            $page.on('click','span',function(){
-			            	opt.index = $(this).index();
-			            	console.log(opt.index);
-			            	$(this).addClass('active').siblings('span').removeClass('active');
-			            	Car.move();
-			            });
 
+			            $page.on('click','span',function(e){
+			            	e = e || window.event
+			            	let target = e.target || e.srcElement;
+			            	this.index = $(target).text()-1;
+			            	this.move();
+			            }.bind(this));
+			         	if(!opt.pageNum){
+			         		$page.css('font-size','0');
+			         	}
 					}
 					// 前后按钮
 					if(opt.buttons){
@@ -103,6 +107,30 @@
             			let $btnPrev = $('<span/>');
             			$btnNext.addClass('next').html('&gt').appendTo($self);
 			            $btnPrev.addClass('prev').html('&lt').appendTo($self);
+			            // $self.on('click','.next .prev',function(){
+			            // 	if($(this).has('.next')){
+			            // 		this.index++;
+			            // 		this.move();
+			            // 	}else if($(this).has('.prev')){
+			            // 		this.index--;
+			            // 		this.move();
+			            // 	}
+			            	
+			            // }.bind(this));
+			            $('.next').on('click',function(){console.log(666)
+			            		this.index++;
+			            		this.move();
+			            }.bind(this));
+
+			            $('.prev').on('click',function(){
+			            		this.index--;
+			            		this.move();
+			            }.bind(this));
+			             
+			            
+					}
+					if(this.opt.type === 'horizontal'){
+						$self.find('ul').css('width',opt.width*this.len).find('li').css('float','left').find('img').css('float','left');
 					}
 
 				},
@@ -112,14 +140,14 @@
 					}else if(this.index < 0){
 						this.index = this.len - 1;
 					}
-					$('.page')
 					let target = {};
 					if(this.opt.type === 'vertical'){
 						target.top = -this.index*this.opt.height;
 					}else if(this.opt.type === 'horizontal'){
 						target.left = -this.index*this.opt.width;
 					}
-					$self.find('ul').animate(target);
+					$self.find('ul').stop().animate(target).next().find('span').eq(this.index).addClass('active').siblings('span').removeClass('active');
+					
 				},
 				stop(){
 					clearInterval(this.timer);

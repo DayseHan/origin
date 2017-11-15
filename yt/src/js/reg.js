@@ -1,11 +1,10 @@
-;jQuery(function($){
-    $('#pageFooter').load('../html/footer.html #footer');
-    // window.onload = function(){
-    //     $('#footer').find('.link').remove();
-    // }
-    document.onreadystatechange = function(){
+jQuery(function($){
+    $('#pageFooter').load('../html/footer.html #footer',function(){
         $('#footer').find('.link').remove();
-    }
+    });
+    // document.onreadystatechange = function(){
+        
+    // }
      
     
 

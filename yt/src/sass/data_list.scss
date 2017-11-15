@@ -1,0 +1,100 @@
+#main{
+    background-color: #EEEEEE;
+    height:587px;
+    .container{
+        height:587px;
+        border:1px solid red; 
+    }
+}
+#tab{
+    background-color: #EEEEEE;
+    padding-top: 10px;
+    .container{
+
+        .tab{
+            width: 990px;
+            .top{
+                border:1px solid skyblue;
+                height: 30px;
+                ul{
+                    background: #999999;
+                    // background: #fff;
+                    line-height: 30px;
+                    color:#fff;
+                    li{
+                        // background: #999999;
+                        float: left;
+                        width: 120px;
+                        text-align: center;
+                        cursor: pointer;
+                    }
+                    .active{
+                        background-color:#B7AB91;
+                    }
+                    div{
+                        float: right;
+                        a{
+                            padding: 0px 16px;
+                        }
+                    }
+                    .d1{
+                        width: 148px;
+                        height: 148px;
+                    }
+                    .d1{
+                        width: 296px;
+                        height: 90px;
+                    }
+                }
+            }
+            .bot{
+                min-height: 600px;
+                border:1px solid red;
+                
+                div{
+                    height: 100%;
+                    background: #fff;
+                    padding: 0 30px;
+
+                }
+                h3{
+                        height: 48px;
+                        line-height: 48px;
+                        background: url(../img/p-long.gif) no-repeat;
+                        font-size: 22px;
+                        span{
+                            color:#c9c9c9;
+                            padding-left: 9px;
+                            font-family: Aparajita,"\5fae\8f6f\96c5\9ed1",Verdana,simsun,Sans-Serif;
+                        }
+                    }
+                .bot1{
+
+                }
+                .bot2{
+                    p{
+                        padding-left: 20px;
+                        line-height: 48px;
+                    }
+                }
+                .bot3{
+
+                }
+                .bot4{
+    
+                }
+
+            }
+        }
+
+        .list{
+            width: 190px;
+            min-height: 400px;
+            border:1px solid green;
+            h5{
+                height: 30px;
+                border:1px solid red;
+            }
+        }
+    }
+}

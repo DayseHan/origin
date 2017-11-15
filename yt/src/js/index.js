@@ -1,4 +1,4 @@
-;jQuery(function($){
+jQuery(function($){
     window.onload = (function(){
         //banner二维码动画
         $('#ewm').on('mouseover',function(){console.log(777)
@@ -54,11 +54,13 @@
             window.open('../html/news.html');
         });
 
-        console.log($('#h_banner').find('.cal'))
-        $('#h_banner').find('.cal').Carousel({
+        $('#h_banner').find('.cal').jjCarousel({
+            width:755,
+            height:470,
             imgs:["img/banner_1.jpg","img/banner_2.jpg","img/banner_3.jpg"],
             index:0,
             page:true,
+            pageNum:false
         });
     });
 });

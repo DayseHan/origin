@@ -1,7 +1,6 @@
 #main{
     background-color: #F5F5F5;
     .container{
-        // height:10000px;
         div{
             margin-bottom: 30px;
             height: 1193px;
@@ -24,3 +23,32 @@
         }
     }
 }
+
+#h_banner{
+        min-height: 470px;
+        background: url(../img/bg-01.jpg) repeat center;
+        .container{
+            position: relative;
+            .cal{
+                min-height: 470px;
+                .size{
+                    height: 470px;
+                    width: 755px;
+                }
+            }
+            .banner{margin: 0 auto;}
+            a{
+                display: inline-block;
+                width: 200px;
+                height: 470px;
+                position: absolute;
+                right: 0px;
+                top: 0px;
+                background: url(../img/banner_r.jpg);
+            }
+        }
+        
+}
+#head #h_nav .tal ul{display: block;}
+        
+    
