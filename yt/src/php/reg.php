@@ -7,33 +7,17 @@
     // var_dump($phone);
     // var_dump($password);
     // 编写sql语句
-        $sql = "select phone from user where phone='$phone'";
+        $sql = "select * from user where phone='$phone' and password='$password'";
         // 执行sql语句query(),得到一个：查询结果集
         $result = $conn->query($sql);
         // 使用查询结果集
             
             if($result->num_rows>0){
-                echo "该手机号已注册，可直接登陆";
+                echo "true";
             }else{
-                if($password != 'null'){
-                    $sql2 = "insert into user(phone,password) values('$phone','$password')";
-                    // 执行sql语句query(),得到一个：查询结果集
-                    $result2 = $conn->query($sql2);
-
-                    if($result2){
-                        echo "恭喜您，注册成功！";
-                    }else{
-                        echo "注册失败，请重试！";
-                    }
-                }else{
-                    echo "验证码已发送！";
-                }
-                
-
-                // 使用查询结果集
-                
+                echo "false";               
             }
-     
+
     //释放查询结果集，避免资源浪费
     // $result->close();
 

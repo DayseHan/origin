@@ -116,6 +116,129 @@ jQuery(function($){
 
         },15);
     });
-    
+
+    //ajax请求数据
+    //$.ajax({
+    // type:"get",
+    //     url:"http://localhost:1232/php/sign_in.php?phone=" + phone,
+    //     success:function(data){
+    //         // var data = JSON.parse(data);
+    //         console.log('------分割线-----');
+    //         console.log('------以下信息为数据库验证结果-----');
+    //         console.log(phone +'=>',data);
+    //         alert(data);
+    //     }
+    // });
+    $.ajax({
+        type:'get',
+        url:"http://localhost:1232/php/index.php",
+        success:function(data){
+            var data = JSON.parse(data);
+            // console.log(data);
+            let html,html1,html2,html3,html4,html5,html6,html7,html8,html9,html10='';
+            var url;
+            $.map(data,function(item,index){
+                // console.log(item.type)
+                url = item.imgurl.slice(1,-1).split(',')[0];
+                html= `<li>
+                        <a><img src = ${url}></a>
+                        <h3><a>${item.brand}</a></h3>
+                        <p><a>${item.title}</a></p>
+                        <h4>${item.price1}<i>${item.price2}</i></h4>
+                    </li>`;    
+                switch(item.type){
+                    case "商场同款":
+                                html1+=html;
+                                $('#main').find('.same_kind').find('ul').html(html1);
+                        break;
+
+                    case "时尚名品":
+                                html2+=html;
+                                $('#main').find('.fashion').find('ul').html(html2);
+                        break;
+
+                    case "潮流女装":
+                            html3+=html;
+                            $('#main').find('.girl').find('ul').html(html3);
+                    break;
+
+                    case "精品男装":
+                            html4+=html;
+                            $('#main').find('.boy').find('ul').html(html4);
+                    break;
+
+                    case "时尚鞋靴":
+                            html5+=html;
+                            $('#main').find('.shoe').find('ul').html(html5);
+                    break;
+
+                    case "潮流箱包":
+                            html6+=html;
+                            $('#main').find('.bag').find('ul').html(html6);
+                    break;
+
+                    case "美容护肤":
+                            html7+=html;
+                            $('#main').find('.beautify').find('ul').html(html7);
+                    break;
+
+                    case "运动户外":
+                            html8+=html;
+                            $('#main').find('.sport').find('ul').html(html8);
+                    break;
+
+                    // case "内衣配饰":
+                    //         html9+=html;
+                    //         $('#main').find('.ACC').find('ul').html(html9);
+                    // break;
+
+                    case "可爱婴童":
+                            html10+=html;
+                            $('#main').find('.kid').find('ul').html(html10);
+                    break;
+
+                        
+                    // case "商场同款":
+                    //     // url={item.imgurl};
+                    //     // console.log(item.imgurl);
+                    //     // url = JSON.parse(item.imgurl);
+                    //     // console.log(
+                    //     url = item.imgurl.slice(1,-1).split(',')[0];
+                    //     // )
+                    //     html1 += `<li>
+                    //     <a><img src = ${url}></a>
+                    //     <h3><a>${item.brand}</a></h3>
+                    //     <p><a>${item.title}</a></p>
+                    //     <h4>${item.price1}<i>${item.price2}</i></h4>
+                    //     </li>
+                    //     `;
+                    //     var $ul1 = $('#main').find('.same_kind').find('ul').html(html1);
+                    // break;
+
+                    // case "时尚名品":
+
+                    //     // url={item.imgurl};
+                    //     console.log(item.imgurl);
+                    //     // url = JSON.parse(item.imgurl);
+                    //     // console.log(
+                    //     url = item.imgurl.slice(1,-1).split(',')[0].slice(3);
+                    //     // )
+                    //     html2 += `<li>
+                    //     <a><img src = ${url}></a>
+                    //     <h3><a>${item.brand}</a></h3>
+                    //     <p><a>${item.title}</a></p>
+                    //     <h4>${item.price1}<i>${item.price2}</i></h4>
+                    //     </li>
+                    //     `;
+                    //     var $ul1 = $('#main').find('.fashion').find('ul').html(html2);
+                    // break;
+
+                }
+            }).join(',');
+        }
+
+    });
+
+    // console.log($('#main').find('.same_kind').find('ul').html('<li></li>'));
 
 });

@@ -2,16 +2,13 @@ jQuery(function($){
     //链接网站头部和尾部
     $('#pageHeader').load('../html/header.html #head',function(){
         // 控制三级列表显示、隐藏
-        $('#h_nav').find('.tal').on('mouseover',function(){
-            $(this).find('ul').css('display','block');
-        }).on('mouseout',function(){
-            $(this).find('ul').css('display','none');
-        })
+        // $('#h_nav').find('.tal').on('mouseover',function(){
+        //     $(this).find('ul').css('display','block');
+        // }).on('mouseout',function(){
+        //     $(this).find('ul').css('display','none');
+        // })
 
-        var $li1 = $('<li/>').appendTo($('#head'));
-        if(!$li1.length){
-            console.log(666);
-        }
+        
     }); 
     $('#pageFooter').load('../html/footer.html #footer');  
         // document.onreadystatechange = function(){

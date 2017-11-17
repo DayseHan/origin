@@ -57,27 +57,63 @@ jQuery(function($){
     let $btn1 = $('#tab1').find('button');
     let $txt1 = $('#tab1').find('.ip1');
     let $pass1 = $('#tab1').find('.ip2');
+    
+
+    let $btn2 = $('#tab2').find('button');console.log($btn2)
+    let $txt2 = $('#tab2').find('.ip3');
+    let $pass2 = $('#tab2').find('.ip4');
+
+    console.log('15989137193','=>未注册');
+    console.log('18720731372','mysql00','=>root(李海静)');
+    console.log('------以上信息非验证，仅用于开发者测试时复制粘贴之用-----');
+
     $btn1.on('click',function(){
-        if($txt1.val() !== '' && !/^1[34578]\d{9}/.test($txt1.val())){
+        if($txt2.val() !== '' && (!/^1[34578]\d{9}/.test($txt2.val()) &&  !/^[a-z0-9][\w\-\.]{2,}@[a-z0-9]+(\.[a-z]{2,})+$/.test($txt2.val()))){
             console.log($txt1.val())
-            alert('你输入的手机号码有误，请重新输入！')
+            alert('手机号码错误/邮箱，请重新输入！')
         }
-        if($pass1.val() !== '' && !/^[a-z](a-z0-9_.){5,19}/.test($pass1.val())){
-            alert('你输入的密码格式有误，请重新输入！')
+        if($pass2.val() !== '' && !/^[a-z](a-z0-9_.){5,19}/.test($pass1.val())){
+            alert('用户名或密码错误，请重试！')
         }
     });
 
-    let $btn2 = $('#tab2').find('button');
-    let $txt2 = $('#tab2').find('.ip1');
-    let $pass2 = $('#tab2').find('.ip2');
-    $btn2.on('click',function(){
-        if($txt2.val() !== '' && (!/^1[34578]\d{9}/.test($txt2.val()) &&  !/^[a-z0-9][\w\-\.]{2,}@[a-z0-9]+(\.[a-z]{2,})+$/.test($txt2.val()))){
-            console.log($txt2.val())
-            alert('你输入的手机/邮箱有误，请重新输入！')
+    $btn1.on('click',function(){
+        var phone = $txt1.val();
+        var password = $pass1.val();
+        console.log(password);
+
+        
+
+        if($txt1.val() !== '' && !/^1[34578]\d{9}/.test($txt1.val())){
+            alert('你输入的手机有误，请重新输入！')
+        }else if(password == '' ){
+            alert('密码不能为空！')
+        }else if(/(a-z){6,12}/.test(password) || /(0-9){6,12}/.test(password)){
+            alert('用户名或密码错误，请重试！')
+        }else if(!/(a-z0-9){6,19}/.test(password)){
+            $.ajax({
+                type:"get",
+                url:'http://localhost:1232/php/reg.php?phone=' + phone +'&password='+password,
+                success:function(data){
+                    // var data = JSON.parse(data);
+                    console.log(data);
+                    if(data =="true"){
+                        alert('登陆成功！');
+                        
+                        location.href=("http://localhost:1232/index.html");
+                    }else{
+                        alert('用户名或密码错误！');
+                    }
+                    
+                    // echo "登陆成功！";
+                    // echo "用户名或密码错误";  
+                }
+            });
         }
-        if($pass2.val() !== '' && !/^[a-z](a-z0-9_.){5,19}/.test($pass2.val())){
-            alert('你输入的密码格式有误，请重新输入！')
+        else{
+            alert('用户名或密码错误，请重试！')
         }
+        
     });
     
 });

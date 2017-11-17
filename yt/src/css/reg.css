@@ -88,10 +88,10 @@
           color: #A9A9A9;
           width: 100%;
           line-height: 60px; }
-      #main .container .banner_r #tab1 .ip1, #main .container .banner_r #tab2 .ip1 {
+      #main .container .banner_r #tab1 .ip1, #main .container .banner_r #tab1 .ip3, #main .container .banner_r #tab2 .ip1, #main .container .banner_r #tab2 .ip3 {
         background: url(../img/ueser-img.png) no-repeat 21px 16px;
         background-size: 25px 25px; }
-      #main .container .banner_r #tab1 .ip2, #main .container .banner_r #tab2 .ip2 {
+      #main .container .banner_r #tab1 .ip2, #main .container .banner_r #tab1 .ip4, #main .container .banner_r #tab2 .ip2, #main .container .banner_r #tab2 .ip4 {
         background: url(../img/pass-img.png) no-repeat 21px 15px;
         background-size: 25px 25px; }
       #main .container .banner_r #tab1 button, #main .container .banner_r #tab2 button {

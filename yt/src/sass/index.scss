@@ -5,7 +5,10 @@
             margin-bottom: 30px;
             height: 1193px;
             border: 1px solid red;
-            h3{
+            .big_h3{
+                background: url('../img/same_kind.png') no-repeat;
+            }
+            .H3{
                 height: 53px;
                 border:1px solid green;
             }
@@ -18,6 +21,14 @@
                     margin-bottom: 10px;
                     margin-right: 7px;
                     border:1px solid skyblue;
+                }
+                a{
+                    display: block;
+                    
+                    img{
+                        width: 210px;
+                        height: 270px;
+                    }
                 }
             }
         }
@@ -77,6 +88,12 @@
         }
         
 }
-#head #h_nav .tal ul{display: block;}
-        
+#head #h_nav .tal ul{
+    display: block;
+
+
+}
+
+    
+
     

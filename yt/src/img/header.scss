@@ -1,7 +1,6 @@
 html,body{
     width: 100%;
-    font-family: Arial;
-    min-width: 1190px;
+    font-family: Arial
 }
 #head{
     min-height:100px;
@@ -14,7 +13,6 @@ html,body{
             float: left;
             padding: 10px 5px;
             position: relative;
-            
             a{@extend %a;}
             }
         %sp{
@@ -37,17 +35,19 @@ html,body{
             %wx0{
                 position: absolute;
                 left: 0px;
-                top: 38px;
+                top: 32px;
                 padding: 6px;
                 background-color: #fff;
             }
             .wx{
-                @extend %wx0;
+                @extend %wx0
+                height: 112px;
                 width: 112px;
             }
             .wx2{
-                @extend %wx0;
+                @extend %wx0
                 width: 140px;
+                height: 140px;
             }
             .b{background:#fff;position: relative;left: 0;
             top: 0;width: 112px;}
@@ -184,8 +184,6 @@ html,body{
         color:#303437;
         font-weight: bold;
         .tal{
-
-            cursor: pointer;
             position: relative;
             z-index:2;
             width: 221px;
@@ -195,66 +193,24 @@ html,body{
             line-height: 40px;
             color:#FFFDFF;
             font-size: 18px;
-            .big_ul{
+            ul{
                 background-color: #333333;
                 color:#E6E4D8;
-                display: none;
-                .active{
-                    background: #e5004f;
-                }
-                .sj{
-                    overflow: hidden;
-                    position: absolute;
-                    left: 209px;
-                    top: 35px;
-                    padding: 12px;
-                    width: 500px;
-                    display: none;
-
-                    color:#c3c3c3;
-                    .left{
-                        float: left;
-                        background-color: #333;
-                        width: 296px;
-                        min-height: 20px;
-                        li{
-                            padding-top: 5px;
-                            height: 56px;
-                            border-bottom:1px dotted #999;
-                            h3{
-                                height: 20px;
-                                line-height: 20px;
-                                font-size: 14px;
-                            }
-                            a{
-                                margin-right: 12px;
-                                font-size: 12px;
-                            }
-                        }
-                    }
-                    .right{
-                        float: left;
-                        width: 160px;
-                        min-height: 20px;
-                        background-color: #000;
-                        font-size: 12px;
-                    }
-                }
+                
                 li{
                     padding-left: 16px;
-                    height: 47.3px;
+                    height: 47px;
                     text-align: left;
                     line-height: 45px;
                     font-size: 16px;
                     border-bottom: 1px solid #515151;
-                    .big_a{
+                    a{
                         color:#E6E4D8;
                         font-size: 12px;
                         padding: 0px 50px 0 10px;
                         margin-left: 10px;
                         border-left:1px solid #999999; 
                         text-decoration: none;
-                        height: 90%;
                         i{
                             color:#515151;
                         }
@@ -268,39 +224,6 @@ html,body{
                             margin-right: 5px;
                         }
                 }
-                // .sj{
-                //     padding-bottom: 25px;
-                //     ul,div{
-                //         height: 425px;
-                //         padding: 8px 20px;
-                //         li{
-                //             font-size: 12px;
-                //         }
-                //         h3{
-                //             font-size: 14px;
-                //             height: 20px;
-                //             line-height: 20px;
-                //         }
-                //         a{
-                //             margin-right: 10px;
-                //         }
-                //     }
-                //     div{
-                //         text-align: left; 
-                //         h4{
-                            
-                //         }
-                //         a{
-                //             color:#E6E4D8;
-                //             font-size: 12px;
-                //             display: block;
-                //             height: 20px;
-                //             line-height: 20px;   
-                            
-                //         }
-                //     }
-                    
-                // }
                   li:nth-child(1){span{background-position:  0px -110px;}}
                  li:nth-child(2){span{background-position: -17px -110px;}}
                  li:nth-child(3){span{background-position: -34px -110px;}}
@@ -352,5 +275,22 @@ html,body{
             }
         }
     }
-    
+    #h_banner{
+        min-height: 470px;
+        background: url(../img/bg-01.jpg) repeat center;
+        .container{
+            position: relative;
+            .banner{margin: 0 auto;}
+            a{
+                display: inline-block;
+                width: 200px;
+                height: 470px;
+                position: absolute;
+                right: 0px;
+                top: 0px;
+                background: url(../img/banner_r.jpg);
+            }
+        }
+        
+    }
 }

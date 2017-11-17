@@ -195,20 +195,30 @@ html, body {
           top: 35px;
           padding: 12px;
           width: 500px;
-          display: none; }
+          display: none;
+          color: #c3c3c3; }
           #head #h_nav .tal .big_ul .sj .left {
             float: left;
             background-color: #333;
             width: 296px;
             min-height: 20px; }
             #head #h_nav .tal .big_ul .sj .left li {
+              padding-top: 5px;
               height: 56px;
               border-bottom: 1px dotted #999; }
+              #head #h_nav .tal .big_ul .sj .left li h3 {
+                height: 20px;
+                line-height: 20px;
+                font-size: 14px; }
+              #head #h_nav .tal .big_ul .sj .left li a {
+                margin-right: 12px;
+                font-size: 12px; }
           #head #h_nav .tal .big_ul .sj .right {
             float: left;
             width: 160px;
             min-height: 20px;
-            background-color: #000; }
+            background-color: #000;
+            font-size: 12px; }
         #head #h_nav .tal .big_ul li {
           padding-left: 16px;
           height: 47.3px;

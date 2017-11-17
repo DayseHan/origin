@@ -41,7 +41,7 @@ jQuery(function($){
         $(this).find('span').removeClass('c');
         $(this).removeClass('b2').find('div').removeClass('wx2').find('img').remove();
     });
-    //顶部《我的永泰》列表
+    //顶部《我的银泰》列表
     $('#myYT').on('mouseover',function(){
         console.log(666);
         $(this).find('ul').css('display','block');
@@ -53,7 +53,7 @@ jQuery(function($){
     $('#h_banner').find('img').on('click',function(){console.log(666)
         window.open('../html/news.html');
     });
-    //二级列表显示、隐藏
+    //二级导航显示、隐藏
     $('#h_nav').find('.tal').on('mouseover',function(){
         $(this).find('.big_ul').css('display','block');
     }).on('mouseout',function(){
@@ -65,65 +65,103 @@ jQuery(function($){
     $('<ul/>').appendTo($('.sj')).addClass('left');
     $('<div/>').appendTo($('.sj')).addClass('right');
 
+    //三级导航显示、隐藏
     var timerout;
     $('#h_nav').find('.tal').find('.big_ul').on('mouseover','.list',function(){
+        clearTimeout(timerout);
         $(this).addClass('active').siblings('.list').removeClass('active');
-        $(this).addClass('active').siblings('.sj').css('display','block');
+        $(this).siblings('.sj').css('display','block');
         // clearTimeout(timerout);
-        console.log($(this).siblings('.sj'))
 
     }).on('mouseout',function(){
-        $(this).find('.sj').css('display','none');
+        console.log(this);
+        timerout = setTimeout(function(){
+            $(this).css('display','none');
+        },2000);
         
+        
+    }).on('mouseout','.list',function(){
+        $(this).removeClass('active');
+        $(this).siblings('.sj').css('display','none');
     });
-    //三级导航ajax
-    // $.ajax({
-    //         type:"get",
-    //         url:"http://localhost:1232/php/header.php",
-    //         success:function(data){
-    //             var data = JSON.parse(data);
 
-    //             var $ul = $('#h_nav').find('.tal').children('ul');
-    //             $('<div/>').appendTo($ul).addClass('sj');
-    //             $('<ul/>').appendTo($('.sj')).addClass('left');
-    //             $('<div/>').appendTo($('.sj')).addClass('right');
+    // 三级导航ajax
+    $.ajax({
+            type:"get",
+            url:"http://localhost:1232/php/header.php",
+            success:function(data){
+                var data = JSON.parse(data);
+                // console.log(data);
 
-    //             $li2 = $('<li/>').append($('<h3/>').text('男装')).appendTo($('.left'));
-    //             $li3 = $('<li/>').append($('<h3/>').text('女装')).appendTo($('.left'));
-    //             $li4 = $('<li/>').append($('<h3/>').text('鞋靴')).appendTo($('.left'));
-    //             $li5 = $('<li/>').append($('<h3/>').text('女包')).appendTo($('.left'));
-    //             $li6 = $('<li/>').append($('<h3/>').text('男包')).appendTo($('.left'));
-    //             $li7 = $('<li/>').append($('<h3/>').text('配饰')).appendTo($('.left'));
-    //             $li8 = $('<li/>').append($('<h3/>').text('婴童')).appendTo($('.left'));
-    //             $li9 = $('.right').append($('<h3/>').text('品牌'));
+            // $.map(data,function(item,index){
+            //     console.log(item.type3)
+
+                // switch(item.type3){
+                //     case '男装':if(!$('.li1').jQuery){console.log(666)
+                //                     $('<li/>').append($('<h3/>').text('男装')).appendTo($('.left')).addClass('li1');
+                //                 }
+                //             $('.li1').html(`<a>${item.name}</a>`);
+                //     break;
+                    // case '女装':
+                    //         $('<a/>').appendTo($li3).text(item.name);
+                    // break;
+                    // case '鞋靴':
+                    //         $('<a/>').appendTo($li4).text(item.name);
+                    // break;case '女包':
+                    //         $('<a/>').appendTo($li5).text(item.name);
+                    // break;case '男包':
+                    //         $('<a/>').appendTo($li6).text(item.name);
+                    // break;case '配饰':
+                    //         $('<a/>').appendTo($li7).text(item.name);
+                    // break;case '婴童':
+                    //         $('<a/>').appendTo($li8).text(item.name);
+                    // break;case '品牌':
+                    //         $('<a/>').appendTo($li9).text(item.name);
+                    // break;
+        //     }
+        // }); 
+
+
+                $li2 = $('<li/>').append($('<h3/>').text('男装')).appendTo($('.left'));
+                $li3 = $('<li/>').append($('<h3/>').text('女装')).appendTo($('.left'));
+                $li4 = $('<li/>').append($('<h3/>').text('鞋靴')).appendTo($('.left'));
+                $li5 = $('<li/>').append($('<h3/>').text('女包')).appendTo($('.left'));
+                $li6 = $('<li/>').append($('<h3/>').text('男包')).appendTo($('.left'));
+                $li7 = $('<li/>').append($('<h3/>').text('配饰')).appendTo($('.left'));
+                $li8 = $('<li/>').append($('<h3/>').text('婴童')).appendTo($('.left'));
+                $li9 = $('.right').append($('<h3/>').text('品牌'));
                 
-    //             $.map(data,function(item,index){
-    //                 console.log(item.type3)
-    //                 switch(item.type3){
-    //                     case '男装':
-    //                             $('<a/>').appendTo($li2).text(item.name);
-    //                     break;case '女装':
-    //                             $('<a/>').appendTo($li3).text(item.name);
-    //                     break;case '鞋靴':
-    //                             $('<a/>').appendTo($li4).text(item.name);
-    //                     break;case '女包':
-    //                             $('<a/>').appendTo($li5).text(item.name);
-    //                     break;case '男包':
-    //                             $('<a/>').appendTo($li6).text(item.name);
-    //                     break;case '配饰':
-    //                             $('<a/>').appendTo($li7).text(item.name);
-    //                     break;case '婴童':
-    //                             $('<a/>').appendTo($li8).text(item.name);
-    //                     break;case '品牌':
-    //                             $('<a/>').appendTo($li9).text(item.name);
-    //                     break;
-    //                 }
-    //             });
+               $.map(data,function(item,index){
+                    // console.log(item.type3)
+                    switch(item.type3){
+                        case '男装':
+                                $('<a/>').appendTo($li2).text(item.name);
+                        break;case '女装':
+                                $('<a/>').appendTo($li3).text(item.name);
+                        break;case '鞋靴':
+                                $('<a/>').appendTo($li4).text(item.name);
+                        break;case '女包':
+                                $('<a/>').appendTo($li5).text(item.name);
+                        break;case '男包':
+                                $('<a/>').appendTo($li6).text(item.name);
+                        break;case '配饰':
+                                $('<a/>').appendTo($li7).text(item.name);
+                        break;case '婴童':
+                                $('<a/>').appendTo($li8).text(item.name);
+                        break;case '品牌':
+                                $('<a/>').appendTo($li9).text(item.name);
+                        break;
+                    }
+                }); 
                 
                 
-    //         }
-    //     });
+            }
+        });
     
+    // var $li1 = $('<li/>').appendTo($('#head'));
+    //     if(!$li1.length){
+    //         console.log(666);
+    //     }
 
 
     
