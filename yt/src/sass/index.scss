@@ -21,6 +21,34 @@
                 }
             }
         }
+        .warp{
+            display: none;
+            position: fixed;
+            right: 51px;
+            bottom: 52px;
+            width: 60px;
+            background: url(../img/floor-nav.fw.png) no-repeat 0px 0px;
+            cursor: pointer;
+            li{
+                padding: 2px;
+                text-align: center;
+                // line-height: 50px;
+                
+                a{
+                    display: block;
+                    height: 50px;
+                    width: 50px;
+                    font-size: 0px;
+                    line-height: 25px;
+                }
+                .active{
+                    color:#fff;
+                    background: red;
+                    font-size: 18px;
+                    
+                }
+            }
+        }
     }
 }
 

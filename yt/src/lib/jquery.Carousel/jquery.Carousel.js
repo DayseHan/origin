@@ -101,22 +101,24 @@
 			         		$page.css('font-size','0');
 			         	}
 					}
-					// 前后按钮
+					//前后按钮
 					if(opt.buttons){
 						let $btnNext = $('<span/>');
             			let $btnPrev = $('<span/>');
             			$btnNext.addClass('next').html('&gt').appendTo($self);
 			            $btnPrev.addClass('prev').html('&lt').appendTo($self);
-			            // $self.on('click','.next .prev',function(){
-			            // 	if($(this).has('.next')){
-			            // 		this.index++;
-			            // 		this.move();
-			            // 	}else if($(this).has('.prev')){
-			            // 		this.index--;
-			            // 		this.move();
-			            // 	}
+
+			  //           $self.on('click','span',function(){
+			  //           	if($(this).hasClass('next')){console.log(666)
+			  //           		this.index++;
+			  //           		this.move();
+			  //           	}else if($(this).hasClass('.prev')){
+			  //           		this.index--;
+			  //           		this.move();
+			  //           	}
 			            	
-			            // }.bind(this));
+			  //           }.bind(this));
+			                  
 			            $('.next').on('click',function(){console.log(666)
 			            		this.index++;
 			            		this.move();
@@ -127,7 +129,6 @@
 			            		this.move();
 			            }.bind(this));
 			             
-			            
 					}
 					if(this.opt.type === 'horizontal'){
 						$self.find('ul').css('width',opt.width*this.len).find('li').css('float','left').find('img').css('float','left');

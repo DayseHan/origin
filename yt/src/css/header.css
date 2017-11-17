@@ -172,6 +172,7 @@ html, body {
     color: #303437;
     font-weight: bold; }
     #head #h_nav .tal {
+      cursor: pointer;
       position: relative;
       z-index: 2;
       width: 221px;
@@ -181,51 +182,75 @@ html, body {
       line-height: 40px;
       color: #FFFDFF;
       font-size: 18px; }
-      #head #h_nav .tal ul {
+      #head #h_nav .tal .big_ul {
         background-color: #333333;
         color: #E6E4D8;
         display: none; }
-        #head #h_nav .tal ul li {
+        #head #h_nav .tal .big_ul .active {
+          background: #e5004f; }
+        #head #h_nav .tal .big_ul .sj {
+          overflow: hidden;
+          position: absolute;
+          left: 209px;
+          top: 35px;
+          padding: 12px;
+          width: 500px;
+          display: none; }
+          #head #h_nav .tal .big_ul .sj .left {
+            float: left;
+            background-color: #333;
+            width: 296px;
+            min-height: 20px; }
+            #head #h_nav .tal .big_ul .sj .left li {
+              height: 56px;
+              border-bottom: 1px dotted #999; }
+          #head #h_nav .tal .big_ul .sj .right {
+            float: left;
+            width: 160px;
+            min-height: 20px;
+            background-color: #000; }
+        #head #h_nav .tal .big_ul li {
           padding-left: 16px;
           height: 47.3px;
           text-align: left;
           line-height: 45px;
           font-size: 16px;
           border-bottom: 1px solid #515151; }
-          #head #h_nav .tal ul li a {
+          #head #h_nav .tal .big_ul li .big_a {
             color: #E6E4D8;
             font-size: 12px;
             padding: 0px 50px 0 10px;
             margin-left: 10px;
             border-left: 1px solid #999999;
-            text-decoration: none; }
-            #head #h_nav .tal ul li a i {
+            text-decoration: none;
+            height: 90%; }
+            #head #h_nav .tal .big_ul li .big_a i {
               color: #515151; }
-          #head #h_nav .tal ul li span {
+          #head #h_nav .tal .big_ul li span {
             display: inline-block;
             width: 17px;
             height: 17px;
             background: url(../img/header-02.png) no-repeat;
             margin-right: 5px; }
-        #head #h_nav .tal ul li:nth-child(1) span {
+        #head #h_nav .tal .big_ul li:nth-child(1) span {
           background-position: 0px -110px; }
-        #head #h_nav .tal ul li:nth-child(2) span {
+        #head #h_nav .tal .big_ul li:nth-child(2) span {
           background-position: -17px -110px; }
-        #head #h_nav .tal ul li:nth-child(3) span {
+        #head #h_nav .tal .big_ul li:nth-child(3) span {
           background-position: -34px -110px; }
-        #head #h_nav .tal ul li:nth-child(4) span {
+        #head #h_nav .tal .big_ul li:nth-child(4) span {
           background-position: -51px -110px; }
-        #head #h_nav .tal ul li:nth-child(5) span {
+        #head #h_nav .tal .big_ul li:nth-child(5) span {
           background-position: -68px -110px; }
-        #head #h_nav .tal ul li:nth-child(6) span {
+        #head #h_nav .tal .big_ul li:nth-child(6) span {
           background-position: -85px -110px; }
-        #head #h_nav .tal ul li:nth-child(7) span {
+        #head #h_nav .tal .big_ul li:nth-child(7) span {
           background-position: -102px -110px; }
-        #head #h_nav .tal ul li:nth-child(8) span {
+        #head #h_nav .tal .big_ul li:nth-child(8) span {
           background-position: -119px -110px; }
-        #head #h_nav .tal ul li:nth-child(9) span {
+        #head #h_nav .tal .big_ul li:nth-child(9) span {
           background-position: -136px -110px; }
-        #head #h_nav .tal ul li:nth-child(10) span {
+        #head #h_nav .tal .big_ul li:nth-child(10) span {
           background-position: -153px -110px; }
     #head #h_nav .ul1 {
       line-height: 41px; }

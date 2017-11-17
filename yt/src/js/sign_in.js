@@ -30,6 +30,20 @@ jQuery(function($){
 
     });
 
+    $btn2.on('click',function(){
+        var phone = $txt1.val();
+        console.log(phone);
+        $.ajax({
+            type:"get",
+            url:"http://localhost:1232/php/sign_in.php?phone=" + phone,
+            success:function(data){
+                var data = JSON.parse(data);
+                
+            }
+        });
+    });
+    
+
     //输入时把input的类型改为password
     $('.banner_r2').find(':text').eq(2).on('focus',function(){
         $(this).keydown(function(){

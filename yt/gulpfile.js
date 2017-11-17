@@ -13,7 +13,7 @@ var sass = require('gulp-sass');
 // 用来编译sass
 gulp.task('myTask',function(){
 	// 查找文件位置
-	gulp.src(['./src/sass/header.scss','./src/sass/footer.scss','./src/sass/reg.scss','./src/sass/sign_in.scss','./src/sass/index.scss']) //得到文件流（文件在内存中的状态）
+	gulp.src(['./src/sass/header.scss','./src/sass/footer.scss','./src/sass/reg.scss','./src/sass/sign_in.scss','./src/sass/index.scss','./src/sass/news.scss','./src/sass/data_list.scss','./src/sass/goods_list.scss','./src/sass/cart.scss']) //得到文件流（文件在内存中的状态）
 
 		.pipe(sass({outputStyle:'nested'}).on('error', sass.logError))	//编译sass文件
 		.pipe(gulp.dest('./src/css/'))			//输出到硬盘
@@ -24,7 +24,7 @@ gulp.task('myTask',function(){
 gulp.task('jtSass',function(){
 	// 监听home.scsss文件
 	// 如果有修改，则执行compileSass任务
-	gulp.watch(['./src/sass/header.scss','./src/sass/footer.scss','./src/sass/reg.scss','./src/sass/sign_in.scss','./src/sass/index.scss'],['myTask'])
+	gulp.watch(['./src/sass/header.scss','./src/sass/footer.scss','./src/sass/reg.scss','./src/sass/sign_in.scss','./src/sass/index.scss','./src/sass/news.scss','./src/sass/data_list.scss','./src/sass/goods_list.scss','./src/sass/cart.scss'],['myTask'])
 })
 
 

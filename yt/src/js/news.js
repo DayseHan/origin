@@ -7,6 +7,11 @@ jQuery(function($){
         }).on('mouseout',function(){
             $(this).find('ul').css('display','none');
         })
+
+        var $li1 = $('<li/>').appendTo($('#head'));
+        if(!$li1.length){
+            console.log(666);
+        }
     }); 
     $('#pageFooter').load('../html/footer.html #footer');  
         // document.onreadystatechange = function(){
@@ -14,22 +19,25 @@ jQuery(function($){
         // };
         //轮播图
     $('.banner').jjCarousel({
-                                width:945,
-                                height:293,
-                                imgs:["../img/banner (1).png","../img/banner (2).png",
-                                    "../img/banner (3).png","../img/banner (4).png",
-                                    "../img/banner (5).png","../img/banner (6).png",
-                                    "../img/banner (7).png","../img/banner (8).png"],
-                                buttons:true,
-                                page:true,
-                                pageNum:true,
-                                type:'horizontal'   
+                            width:945,
+                            height:293,
+                            imgs:["../img/banner (1).png","../img/banner (2).png",
+                                "../img/banner (3).png","../img/banner (4).png",
+                                "../img/banner (5).png","../img/banner (6).png",
+                                "../img/banner (7).png","../img/banner (8).png"],
+                            buttons:true,
+                            page:true,
+                            pageNum:true,
+                            type:'horizontal'   
     });
 
     //一些小样式
     $('.container').css('padding-bottom',30);
     $('#main').css('background','url(../img/news-bg.jpg) center');
     $('.container').css('background','#F0F0F0');
+
+
+
 });
     
 
