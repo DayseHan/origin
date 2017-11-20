@@ -1,0 +1,66 @@
+html, body {
+  height: 100%;
+  width: 100%;
+  font-family: Arial; }
+
+#footer {
+  padding-top: 30px; }
+  #footer .container .link {
+    background-color: #F7F7F7; }
+    #footer .container .link span {
+      padding-top: 30px;
+      display: inline-block;
+      float: left;
+      width: 25%;
+      height: 90px;
+      border-right: 1px solid #EEEEEE;
+      font-size: 16px;
+      text-align: center; }
+      #footer .container .link span i {
+        color: #C80E4F; }
+      #footer .container .link span h4 {
+        color: #888;
+        font-size: 12px; }
+    #footer .container .link .s0 strong {
+      display: inline-block;
+      font-size: 16px;
+      color: #C80E4F;
+      background: url(../img/footer-01.png) no-repeat 0px -2px;
+      padding-left: 20px;
+      font-size: 20px; }
+    #footer .container .link .s0 h4 {
+      display: inline; }
+    #footer .container .link .s0 .em {
+      background: url(../img/footer-01.png) no-repeat 0px -28px;
+      padding-left: 20px;
+      font-size: 14px; }
+    #footer .container .link .s1 {
+      background: url(../img/footer-01.png) no-repeat 45px -56px; }
+    #footer .container .link .s2 {
+      background: url(../img/footer-01.png) no-repeat 45px -132px; }
+    #footer .container .link .s3 {
+      background: url(../img/footer-01.png) no-repeat 35px -203px; }
+  #footer .container ul {
+    width: 770px;
+    margin: 0 auto;
+    padding: 40px 0px 27px; }
+    #footer .container ul li {
+      color: #787884;
+      float: left; }
+      #footer .container ul li a {
+        border-right: 1px solid #787884;
+        padding: 0px 10px; }
+  #footer .container .bottom {
+    font-size: 12px;
+    text-align: center;
+    color: #B3B1B2;
+    line-height: 24px; }
+    #footer .container .bottom a {
+      margin-left: 20px;
+      color: #B3B1B2; }
+    #footer .container .bottom p {
+      margin-top: 10px;
+      margin-bottom: 15px;
+      text-align: center; }
+      #footer .container .bottom p img {
+        display: inline; }

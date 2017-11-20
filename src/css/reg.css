@@ -1,0 +1,226 @@
+#head {
+  height: 116px;
+  padding-top: 20px; }
+  #head .container {
+    height: 76px; }
+    #head .container h1 {
+      float: left; }
+      #head .container h1 a {
+        display: block;
+        width: 215px;
+        height: 76px;
+        background: url(../img/header-20160223.gif) no-repeat; }
+    #head .container .div1 {
+      width: 124px;
+      height: 24px;
+      margin-top: 52px;
+      margin-left: 220px;
+      background: url(../img/header-login.png) no-repeat;
+      position: absolute; }
+    #head .container .div2 {
+      display: inline-block;
+      float: right; }
+      #head .container .div2 span {
+        padding-top: 30px;
+        padding-left: 38px;
+        display: inline-block;
+        float: left;
+        height: 90px;
+        width: 186px;
+        font-size: 16px;
+        text-align: center; }
+        #head .container .div2 span i {
+          color: #C80E4F; }
+        #head .container .div2 span h4 {
+          color: #888;
+          font-size: 12px; }
+      #head .container .div2 .s1 {
+        background: url(../img/footer-01.png) no-repeat 10px -56px; }
+      #head .container .div2 .s2 {
+        background: url(../img/footer-01.png) no-repeat 9px -132px; }
+      #head .container .div2 .s3 {
+        background: url(../img/footer-01.png) no-repeat 5px -203px; }
+
+#main {
+  height: 568px;
+  background-color: #F9F9F9;
+  padding-top: 50px; }
+  #main .container .banner_l {
+    float: left; }
+  #main .container .banner_r {
+    float: right;
+    width: 388px;
+    height: 370px; }
+    #main .container .banner_r ul {
+      border-bottom: 1px solid #D2D2D2;
+      background-color: #fff; }
+      #main .container .banner_r ul li {
+        height: 40px;
+        float: left;
+        width: 33.3%;
+        line-height: 24px;
+        text-align: center;
+        font-size: 16px;
+        padding: 10px 0px;
+        cursor: pointer; }
+        #main .container .banner_r ul li span {
+          display: inline-block;
+          width: 100%;
+          border-right: 1px solid #D2D2D2; }
+      #main .container .banner_r ul li:nth-child(3) span {
+        border: 0 none; }
+      #main .container .banner_r ul .active {
+        border-bottom: 3px solid #E5004F; }
+    #main .container .banner_r div {
+      margin-top: 20px;
+      height: 310px; }
+    #main .container .banner_r #tab1, #main .container .banner_r #tab2 {
+      text-align: center; }
+      #main .container .banner_r #tab1 span, #main .container .banner_r #tab2 span {
+        display: block;
+        background-color: #fff; }
+        #main .container .banner_r #tab1 span input, #main .container .banner_r #tab2 span input {
+          padding-left: 65px;
+          height: 60px;
+          border-top: 1px solid #D5D5D5;
+          border-bottom: 1px solid #D5D5D5;
+          font-size: 18px;
+          color: #A9A9A9;
+          width: 100%;
+          line-height: 60px; }
+      #main .container .banner_r #tab1 .ip1, #main .container .banner_r #tab1 .ip3, #main .container .banner_r #tab2 .ip1, #main .container .banner_r #tab2 .ip3 {
+        background: url(../img/ueser-img.png) no-repeat 21px 16px;
+        background-size: 25px 25px; }
+      #main .container .banner_r #tab1 .ip2, #main .container .banner_r #tab1 .ip4, #main .container .banner_r #tab2 .ip2, #main .container .banner_r #tab2 .ip4 {
+        background: url(../img/pass-img.png) no-repeat 21px 15px;
+        background-size: 25px 25px; }
+      #main .container .banner_r #tab1 button, #main .container .banner_r #tab2 button {
+        margin-top: 10px;
+        margin-bottom: 20px;
+        height: 50px;
+        width: 365px;
+        background-color: #E5004F;
+        margin: 10 auto;
+        border-radius: 7px;
+        font-size: 18px;
+        color: #fff;
+        cursor: pointer; }
+      #main .container .banner_r #tab1 p, #main .container .banner_r #tab2 p {
+        padding: 0 25px;
+        font-size: 16px; }
+        #main .container .banner_r #tab1 p a:nth-child(1), #main .container .banner_r #tab2 p a:nth-child(1) {
+          float: left; }
+        #main .container .banner_r #tab1 p a:nth-child(2), #main .container .banner_r #tab2 p a:nth-child(2) {
+          float: right;
+          color: red; }
+    #main .container .banner_r #tab3 {
+      text-align: center;
+      background: #fff; }
+      #main .container .banner_r #tab3 h3 {
+        font-size: 14px;
+        line-height: 78px;
+        text-align: center;
+        color: #000; }
+      #main .container .banner_r #tab3 .i {
+        position: relative;
+        display: block;
+        width: 280px;
+        height: 140px;
+        margin: 0 auto; }
+        #main .container .banner_r #tab3 .i .img {
+          display: inline-block;
+          position: absolute;
+          left: 80px; }
+        #main .container .banner_r #tab3 .i i {
+          display: inline-block;
+          width: 135px;
+          height: 175px;
+          position: absolute;
+          right: 0px;
+          opacity: 0; }
+      #main .container .banner_r #tab3 p {
+        margin-top: 20px;
+        margin-bottom: 16px; }
+      #main .container .banner_r #tab3 span {
+        display: block;
+        width: 142px;
+        height: 24px;
+        border: 1px solid red;
+        margin: 0 auto;
+        line-height: 24px; }
+  #main .container .banner_r2 {
+    float: right;
+    width: 388px;
+    height: 370px;
+    font-size: 16px; }
+    #main .container .banner_r2 h3 {
+      height: 40px;
+      line-height: 40px;
+      font-size: 14px;
+      text-align: center;
+      border-bottom: 3px solid #E5004F;
+      background: #fff; }
+    #main .container .banner_r2 span {
+      text-align: right;
+      height: 40px;
+      line-height: 40px;
+      display: block;
+      border-bottom: 1px solid #D2D2D2; }
+      #main .container .banner_r2 span a {
+        color: red; }
+    #main .container .banner_r2 div {
+      background-color: #fff;
+      height: 45px;
+      color: #A9A9A9;
+      width: 100%;
+      line-height: 45px;
+      border-bottom: 1px solid #D2D2D2; }
+      #main .container .banner_r2 div input {
+        font-size: 16px;
+        width: 65%;
+        padding-left: 25px; }
+      #main .container .banner_r2 div .ipt {
+        color: #666;
+        border: 1px solid #ccc;
+        height: 27px;
+        width: 90px;
+        border-radius: 5px;
+        text-align: center;
+        line-height: 27px;
+        background: #fff; }
+    #main .container .banner_r2 p {
+      margin: 15px 0;
+      font-size: 12px;
+      padding: 0 13px; }
+    #main .container .banner_r2 .submit {
+      disabled: false;
+      display: block;
+      border-radius: 6px;
+      height: 35px;
+      width: 308px;
+      background-color: #ccc;
+      color: #fff;
+      margin: 0 auto;
+      cursor: pointer; }
+  #main .container .banner_b {
+    float: right;
+    brder: 1px solid red;
+    height: 90px;
+    width: 388px;
+    padding: 34px 20px;
+    font-size: 12px;
+    text-align: center;
+    background-color: #fff; }
+    #main .container .banner_b .banner_b0 {
+      border-top: 1px solid #888;
+      position: relative; }
+      #main .container .banner_b .banner_b0 span {
+        position: absolute;
+        top: -10px;
+        left: 86px;
+        background-color: #fff;
+        padding: 0px 10px; }
+      #main .container .banner_b .banner_b0 p {
+        padding-top: 15px; }
+        #main .container .banner_b .banner_b0 p a {
+          padding: 0px 8px; }

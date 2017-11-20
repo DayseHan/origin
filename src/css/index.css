@@ -1,0 +1,122 @@
+#main {
+  background-color: #F5F5F5;
+  padding-top: 20px; }
+  #main .container {
+    background: #fff; }
+    #main .container h5 {
+      height: 30px;
+      background-color: #F5F5F5; }
+    #main .container div {
+      height: 1193px;
+      background-color: #F5F5F5; }
+      #main .container div .H3, #main .container div .big_h3 {
+        height: 53px;
+        background: #fff;
+        padding-left: 10px;
+        padding-top: 6px; }
+        #main .container div .H3 a, #main .container div .big_h3 a {
+          height: 36px;
+          display: block;
+          width: 100%;
+          cursor: pointer;
+          background: url("../img/floor-all.png") no-repeat; }
+        #main .container div .H3 .h61, #main .container div .big_h3 .h61 {
+          background-position: 0 0px; }
+        #main .container div .H3 .h62, #main .container div .big_h3 .h62 {
+          background-position: 0 -46px; }
+        #main .container div .H3 .h63, #main .container div .big_h3 .h63 {
+          background-position: 0 -92px; }
+        #main .container div .H3 .h64, #main .container div .big_h3 .h64 {
+          background-position: 0 -138px; }
+        #main .container div .H3 .h65, #main .container div .big_h3 .h65 {
+          background-position: 0 -184px; }
+        #main .container div .H3 .h66, #main .container div .big_h3 .h66 {
+          background-position: 0 -230px; }
+        #main .container div .H3 .h67, #main .container div .big_h3 .h67 {
+          background-position: 0 -276px; }
+        #main .container div .H3 .h68, #main .container div .big_h3 .h68 {
+          background-position: 0 -372px; }
+      #main .container div .big_h3 a {
+        background: url("../img/same_kind.png") no-repeat; }
+      #main .container div ul {
+        margin-top: 10px;
+        padding-left: 3px; }
+        #main .container div ul li {
+          float: left;
+          width: 230px;
+          height: 370px;
+          margin-bottom: 10px;
+          margin-right: 7px;
+          background-color: #fff;
+          padding: 0 10px;
+          position: relative; }
+          #main .container div ul li p a {
+            color: #666; }
+          #main .container div ul li h3 {
+            height: 28px;
+            line-height: 28px; }
+            #main .container div ul li h3 a {
+              display: inline;
+              color: #000; }
+          #main .container div ul li h4 {
+            color: red;
+            font-size: 16px;
+            line-height: 36px;
+            height: 36px; }
+          #main .container div ul li i {
+            text-decoration: line-through;
+            color: #ccc;
+            position: absolute;
+            right: 15px;
+            font-size: 12px;
+            color: #999; }
+        #main .container div ul a {
+          display: block; }
+          #main .container div ul a img {
+            width: 210px;
+            height: 270px; }
+    #main .container .warp {
+      display: none;
+      position: fixed;
+      right: 51px;
+      bottom: 52px;
+      width: 60px;
+      background: url(../img/floor-nav.fw.png) no-repeat 0px 0px;
+      cursor: pointer; }
+      #main .container .warp li {
+        padding: 2px;
+        text-align: center; }
+        #main .container .warp li a {
+          display: block;
+          height: 50px;
+          width: 50px;
+          font-size: 0px;
+          line-height: 25px; }
+        #main .container .warp li .active {
+          color: #fff;
+          background: red;
+          font-size: 18px; }
+
+#h_banner {
+  min-height: 470px;
+  background: url(../img/bg-01.jpg) repeat center; }
+  #h_banner .container {
+    position: relative; }
+    #h_banner .container .cal {
+      min-height: 470px; }
+      #h_banner .container .cal .size {
+        height: 470px;
+        width: 755px; }
+    #h_banner .container .banner {
+      margin: 0 auto; }
+    #h_banner .container a {
+      display: inline-block;
+      width: 200px;
+      height: 470px;
+      position: absolute;
+      right: 0px;
+      top: 0px;
+      background: url(../img/banner_r.jpg); }
+
+#head #h_nav .tal .big_ul {
+  display: block; }
